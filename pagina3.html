@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Servicio Turístico</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        .privacy {
+            font-size: 13px;
+            margin-top: 15px;
+            color: #444;
+        }
+
+        .privacy input {
+            margin-right: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 30px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro para Transporte Turístico</h2>
+    <form action="procesar_registro.php" method="post">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono de contacto:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="fecha">Fecha del viaje:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" name="personas" min="1" required>
+
+        <label for="destino">Destino turístico:</label>
+        <select id="destino" name="destino" required>
+            <option value="">Seleccione un destino</option>
+            <option value="Montaña">Montaña</option>
+            <option value="Ciudad">Ciudad</option>
+            <option value="Ruta histórica">Ruta histórica</option>
+        </select>
+
+        <div class="privacy">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            <label for="privacidad">
+                Acepto que mis datos serán utilizados únicamente para fines relacionados con la gestión del
+                servicio de transporte turístico. No se compartirán con terceros ni se usarán con fines publicitarios.
+            </label>
+        </div>
+
+        <input type="submit" value="Enviar Registro">
+    </form>
+</div>
+
+<div class="footer">
+    &copy; 2025 Transporte Turístico Antioquia. Todos los derechos reservados.
+</div>
+
+</body>
+</html>
